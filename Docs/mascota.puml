@@ -1,0 +1,30 @@
+@startuml mascota
+class Mascota{
+    -salud :  salud
+
+    +Mascota()
+}
+class Alimento
+class popo
+class salud
+class pelota
+class collar
+class Juguete
+class felicidad
+class agua
+class cubeta
+class hueso
+salud o- Mascota
+Mascota "1" o-"1" Alimento
+popo "1" -o "1" Alimento
+Juguete "3" -o "3"pelota
+pelota "1"-* "1" Mascota
+Juguete "1" -* "1"collar
+collar "1" o- "1"Mascota
+pelota "1"<-felicidad
+collar "1"<- "1"felicidad
+agua "1" *- "2" cubeta
+agua "1" o- "1" Mascota
+hueso"1" o- "1" Juguete
+hueso"1"<- "1" Alimento
+@enduml
